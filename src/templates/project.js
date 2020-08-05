@@ -1,13 +1,18 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import Layout from "../components/layout"
+import Head from "../components/head"
+
 const Project = ({ data }) => {
-  console.log(data.project.titel)
   return (
-    <div>
-      <h1>{data.project.titel}</h1>
-      <p>{data.project.introduction.introduction}</p>
-    </div>
+    <Layout>
+      <Head title={data.project.titel} />
+      <div>
+        <h1>{data.project.titel}</h1>
+        <p>{data.project.introduction.introduction}</p>
+      </div>
+    </Layout>
   )
 }
 

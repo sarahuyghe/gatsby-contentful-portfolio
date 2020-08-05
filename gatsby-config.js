@@ -9,7 +9,11 @@ require("dotenv").config({
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: `Sara Huyghe`,
+  },
   plugins: [
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
     {
       resolve: `gatsby-source-contentful`,

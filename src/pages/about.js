@@ -1,12 +1,12 @@
 import React from "react"
 
-import Header from "./../components/header"
-import Footer from "./../components/footer"
+import Layout from "../components/layout"
+import Head from "../components/head"
 
 const AboutPage = () => {
   return (
-    <>
-      <Header />
+    <Layout>
+      <Head title="About" />
       <section class="about">
         <div>
           <h4>console.log("hello")</h4>
@@ -58,8 +58,7 @@ const AboutPage = () => {
           <a href="mailto:sara.huyghe@student.howest.be">Contact me!</a>
         </div>
       </section>
-      <Footer />
-    </>
+    </Layout>
   )
 }
 

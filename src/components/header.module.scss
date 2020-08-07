@@ -2,13 +2,35 @@ $color-white: white;
 $color-black: black;
 $color-accent: #ff414e;
 
+header {
+  margin: 0 20px;
+
+  // display: grid;
+  // grid-template-columns: 60px 1fr 60px;
+  @media only screen and (min-width: 768px) {
+    margin: 0 60px;
+  }
+}
+
 .site_header {
+  grid-column: 2;
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
   font-family: Roboto, sans-serif;
   font-size: 2rem;
   font-weight: 700;
+
+  .header_logo {
+    a {
+      transition: 0.25s ease-in-out;
+      text-decoration: none;
+
+      &:hover {
+        color: $color-black;
+      }
+    }
+  }
 
   a {
     text-decoration: none;
@@ -30,5 +52,9 @@ $color-accent: #ff414e;
     li {
       margin: 0 15px;
     }
+  }
+
+  .test {
+    color: $color-accent;
   }
 }

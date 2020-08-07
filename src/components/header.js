@@ -7,19 +7,22 @@ const Header = () => {
   return (
     <>
       <header>
-        <nav class={headerStyles.site_header}>
-          <div href="index.php" class="site_header__logo-link">
-            <p class="site-header__logo">
+        <nav className={headerStyles.site_header}>
+          <div href="index.php" className="site_header__logo-link">
+            <p className={headerStyles.header_logo}>
               <Link to="/">Sara Huyghe</Link>
-              {/* <span class="d-none">Sara Huyghe</span> */}
             </p>
           </div>
-          <ul class="site-header__nav">
+          <ul className="site-header__nav">
             <li>
-              <Link to="/blog">Blog</Link>
+              <Link to="/" activeClassName="test">
+                Projects
+              </Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/about" activeClassName="test">
+                About
+              </Link>
             </li>
           </ul>
         </nav>

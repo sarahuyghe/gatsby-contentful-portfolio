@@ -1,0 +1,11 @@
+$color-white: white;
+$color-black: black;
+$color-accent: #ff414e;
+
+.main {
+  margin: 0px 20px;
+
+  @media only screen and (min-width: 768px) {
+    margin: 0px 60px;
+  }
+}

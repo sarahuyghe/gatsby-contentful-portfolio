@@ -7,11 +7,15 @@ import Head from "../components/head"
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulProject(sort: { fields: titel, order: ASC }) {
+      allContentfulProject {
         edges {
           node {
             titel
             id
+            slug
+            introduction {
+              introduction
+            }
           }
         }
       }
@@ -25,19 +29,53 @@ const IndexPage = () => {
       <section className="intro">
         <h4>console.log("hello")</h4>
         <h1>
-          I'm Sara, a junior <strong>Front End Developer</strong>
+          I'm Sara, a <strong>Front End Developer</strong>
         </h1>
         <h2>Here are some projects that I worked on</h2>
       </section>
       <section>
-        {data.allContentfulProject.edges.map(edge => {
-          return (
-            <div key={edge.node.id}>
-              <Link to={`/projects/${edge.node.titel}`}>
-                <h4>{edge.node.titel}</h4>
-              </Link>
-            </div>
-          )
+        {data.allContentfulProject.edges.map((edge, index) => {
+          if (index % 2) {
+            return (
+              <div key={edge.node.id} className="project-odd">
+                <div class="about_project">
+                  <h2>{edge.node.titel}</h2>
+                  <p>{edge.node.introduction.introduction}</p>
+                  <p className="link">
+                    <Link to={`/projects/${edge.node.slug}`}>
+                      More about this project
+                    </Link>
+                  </p>
+                </div>
+                <div className="image-container">
+                  <div>
+                    <Link>
+                      <img src="https://picsum.photos/id/237/500/240" alt="t" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            )
+          } else {
+            return (
+              <div key={edge.node.id} className="project-even">
+                <div className="image-container">
+                  <Link>
+                    <img src="https://picsum.photos/id/237/500/240" alt="t" />
+                  </Link>
+                </div>
+                <div class="about_project">
+                  <h2>{edge.node.titel}</h2>
+                  <p>{edge.node.introduction.introduction}</p>
+                  <p className="link">
+                    <Link to={`/projects/${edge.node.slug}`}>
+                      More about this project
+                    </Link>
+                  </p>
+                </div>
+              </div>
+            )
+          }
         })}
       </section>
     </Layout>

@@ -1,19 +1,23 @@
 import React from "react"
 
+import selfportrait from "./me.png"
+
 import Layout from "../components/layout"
 import Head from "../components/head"
+
+// import Image from "../components/image"
 
 const AboutPage = () => {
   return (
     <Layout>
       <Head title="About" />
-      <section class="about">
-        <div>
+      <section className="about">
+        <div className="about_container">
           <h4>console.log("hello")</h4>
           <h1>
             I'm Sara, a junior <strong>Front End Developer</strong>
           </h1>
-          <div class="about_detail">
+          <div className="about_detail">
             <p>
               I'm Sara Huyghe, a 21-years old Digital design and development
               student at Howest. My main focus is front-end development.{" "}
@@ -25,13 +29,20 @@ const AboutPage = () => {
             </p>
           </div>
         </div>
-        <div class="image_container">
-          <img src="./assets/img/me.png" alt="" width="302" />
-        </div>
+        {/* <div > */}
+        {/* <Image src={selfportrait} width={390} height={525} mode="fit" /> */}
+        {/* <div></div> */}
+
+        <img
+          src={selfportrait}
+          alt="img of myself"
+          className="image_container"
+        />
+        {/* </div> */}
       </section>
-      <section class="info_skills">
+      <section className="info_skills">
         <h3>Skills</h3>
-        <ul class="skills">
+        <ul className="skills">
           <li>HTML5 & CSS</li>
           <li>React</li>
           <li>Javascript ES6</li>
@@ -42,20 +53,18 @@ const AboutPage = () => {
           <li>Git</li>
         </ul>
       </section>
-      <section class="info_contact">
+      <section className="info_contact">
         <div>
           <p>
             Currently open for interesting job offers!
             <br />
             I’d hire me, would you?
           </p>
-          <a href="mailto:sara.huyghe@student.howest.be?subject=internship">
-            YES!
-          </a>
+          <a href="mailto:sara.huyghe.work@gmail.com?subject=job offer">YES!</a>
         </div>
         <div>
           <p>If you have any questions or just grab a beer and chat?</p>
-          <a href="mailto:sara.huyghe@student.howest.be">Contact me!</a>
+          <a href="mailto:sara.huyghe.work@gmail.com">Contact me!</a>
         </div>
       </section>
     </Layout>

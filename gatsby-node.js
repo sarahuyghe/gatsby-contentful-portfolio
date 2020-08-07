@@ -9,7 +9,7 @@ exports.createPages = ({ graphql, actions }) => {
       allContentfulProject {
         edges {
           node {
-            titel
+            slug
           }
         }
       }
@@ -23,10 +23,10 @@ exports.createPages = ({ graphql, actions }) => {
 
       result.data.allContentfulProject.edges.forEach(project => {
         createPage({
-          path: `/projects/${project.node.titel}/`,
+          path: `/projects/${project.node.slug}/`,
           component: slash(projectTemplate),
           context: {
-            titel: project.node.titel,
+            slug: project.node.slug,
           },
         })
       })

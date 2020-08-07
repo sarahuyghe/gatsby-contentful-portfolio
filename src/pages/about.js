@@ -12,23 +12,26 @@ const AboutPage = () => {
     <Layout>
       <Head title="About" />
       <section className="about">
-        <div className="about_container">
+        <div className="about_header">
           <h4>console.log("hello")</h4>
           <h1>
-            I'm Sara, a junior <strong>Front End Developer</strong>
+            I'm Sara, a <strong>Front End Developer</strong>
           </h1>
-          <div className="about_detail">
-            <p>
-              I'm Sara Huyghe, a 21-years old Digital design and development
-              student at Howest. My main focus is front-end development.{" "}
-            </p>
-            <p>
-              When I’m not working or learning about new technologies, you can
-              find me watching/playing sports, listening to music or talking
-              about anything in a local pub.
-            </p>
-          </div>
         </div>
+        {/* <div className="about_container"> */}
+
+        <div className="about_detail">
+          <p>
+            I'm Sara Huyghe, a 21-years old Digital design and development
+            student at Howest. My main focus is front-end development.{" "}
+          </p>
+          <p>
+            When I’m not working or learning about new technologies, you can
+            find me watching/playing sports, listening to music or talking about
+            anything in a local pub.
+          </p>
+        </div>
+        {/* </div> */}
         {/* <div > */}
         {/* <Image src={selfportrait} width={390} height={525} mode="fit" /> */}
         {/* <div></div> */}

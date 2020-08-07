@@ -27,8 +27,11 @@ footer {
   justify-content: space-between;
   margin-top: 40px;
   font-family: Roboto, sans-serif;
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: 700;
+  @media only screen and (min-width: 768px) {
+    font-size: 2rem;
+  }
 
   a {
     text-decoration: none;
@@ -48,7 +51,11 @@ footer {
     }
 
     li {
-      margin: 0 15px;
+      margin: 0 5px;
+
+      @media only screen and (min-width: 768px) {
+        margin: 0 15px;
+      }
     }
   }
 }

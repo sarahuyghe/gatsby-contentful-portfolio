@@ -1,6 +1,8 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 
+import projectImage from "./firstTEst.png"
+
 import Layout from "../components/layout"
 import Head from "../components/head"
 
@@ -38,7 +40,7 @@ const IndexPage = () => {
           if (index % 2) {
             return (
               <div key={edge.node.id} className="project-odd">
-                <div class="about_project">
+                <div className="about_project">
                   <h2>{edge.node.titel}</h2>
                   <p>{edge.node.introduction.introduction}</p>
                   <p className="link">
@@ -49,8 +51,8 @@ const IndexPage = () => {
                 </div>
                 <div className="image-container">
                   <div>
-                    <Link>
-                      <img src="https://picsum.photos/id/237/500/240" alt="t" />
+                    <Link to={`/projects/${edge.node.slug}`}>
+                      <img src={projectImage} alt="t" />
                     </Link>
                   </div>
                 </div>
@@ -60,11 +62,11 @@ const IndexPage = () => {
             return (
               <div key={edge.node.id} className="project-even">
                 <div className="image-container">
-                  <Link>
-                    <img src="https://picsum.photos/id/237/500/240" alt="t" />
+                  <Link to={`/projects/${edge.node.slug}`}>
+                    <img src={projectImage} alt="t" />
                   </Link>
                 </div>
-                <div class="about_project">
+                <div className="about_project">
                   <h2>{edge.node.titel}</h2>
                   <p>{edge.node.introduction.introduction}</p>
                   <p className="link">

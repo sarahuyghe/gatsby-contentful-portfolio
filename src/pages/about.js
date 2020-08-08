@@ -22,7 +22,7 @@ const AboutPage = () => {
 
         <div className="about_detail">
           <p>
-            I'm Sara Huyghe, a 21-years old Digital design and development
+            I'm Sara Huyghe, a 22-years old Digital design and development
             student at Howest. My main focus is front-end development.{" "}
           </p>
           <p>

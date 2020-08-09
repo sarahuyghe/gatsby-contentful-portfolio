@@ -2,20 +2,21 @@ $color-white: white;
 $color-black: black;
 $color-accent: #ff414e;
 
-p {
-  margin: 5px 0;
+h3 {
   font-size: 1.8rem;
-  line-height: 25px;
+  @media only screen and (min-width: 768px) {
+    font-size: 2.5rem;
+  }
 }
 
 .intro {
-  margin: 40px 0 20px 0;
+  margin: 40px 0 25px;
 
   @media only screen and (min-width: 768px) {
-    margin: 50px 0 20px 0;
+    margin: 50px 0 25px;
   }
   @media only screen and (min-width: 992px) {
-    margin: 78px 0 20px 0;
+    margin: 78px 0 25px;
   }
 
   h1 {
@@ -36,25 +37,55 @@ p {
 
 .about {
   display: grid;
-  grid-template-columns: 60% 40%;
+
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: 60% 40%;
+    margin-top: 28px;
+  }
 
   h3 {
     margin-bottom: 5px;
   }
 
+  p {
+    margin: 5px 0;
+    font-size: 1.4rem;
+    line-height: 22px;
+
+    @media only screen and (min-width: 768px) {
+      font-size: 1.8rem;
+      line-height: 25px;
+    }
+  }
+
   .briefing {
-    padding-right: 45px;
+    @media only screen and (min-width: 768px) {
+      padding-right: 45px;
+    }
 
     div {
-      margin: 28px 0;
+      margin: 10px 0;
+
+      @media only screen and (min-width: 768px) {
+        margin: 28px 0;
+      }
     }
   }
 
   .credits {
-    margin-top: 28px;
+    grid-row: 1;
+    padding-top: 8px;
+
+    @media only screen and (min-width: 768px) {
+      grid-row: unset;
+    }
 
     & div {
-      margin: 20px 0;
+      margin: 10px 0;
+
+      @media only screen and (min-width: 768px) {
+        margin: 20px 0;
+      }
     }
   }
 }
@@ -64,6 +95,14 @@ p {
   position: relative;
   padding-left: 20px;
   margin-left: 15px;
+  font-size: 1.4rem;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 1.6rem;
+  }
+  @media only screen and (min-width: 992px) {
+    font-size: 1.8rem;
+  }
 }
 
 .listing::before {
@@ -72,7 +111,7 @@ p {
   width: 10px;
   height: 10px;
   position: absolute;
-  top: 30%;
+  top: 7.5px;
   left: 0;
   background-repeat: no-repeat;
 }
@@ -83,10 +122,13 @@ p {
   a {
     transition: 0.25s ease-in-out;
     text-decoration: none;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: 700;
     font-family: Roboto, sans-serif;
     position: relative;
+    @media only screen and (min-width: 768px) {
+      font-size: 2.5rem;
+    }
 
     &:hover {
       color: $color-accent;
@@ -102,11 +144,18 @@ p {
   width: 20px;
   height: 18px;
   position: absolute;
-  top: 25%;
-  left: 185px;
+  top: 20%;
+  left: 135px;
   background-repeat: no-repeat;
+  @media only screen and (min-width: 768px) {
+    left: 185px;
+    top: 25%;
+  }
 }
 
 .linkToProject a:hover::after {
-  left: 190px;
+  left: 140px;
+  @media only screen and (min-width: 768px) {
+    left: 190px;
+  }
 }

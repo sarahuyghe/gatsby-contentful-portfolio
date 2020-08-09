@@ -1,7 +1,10 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 
-import projectImage from "./firstTEst.png"
+// import projectImageBXL from "./bxl.jpg"
+// import projectImageCubo from "./cubo.jpg"
+// import projectImageGreenGames from "./greengames.jpg"
+// import projectImageWatchlist from "./watchlist.jpg"
 
 import Layout from "../components/layout"
 import Head from "../components/head"
@@ -15,6 +18,11 @@ const IndexPage = () => {
             titel
             id
             slug
+            image {
+              file {
+                url
+              }
+            }
             introduction {
               introduction
             }
@@ -52,7 +60,7 @@ const IndexPage = () => {
                 <div className="image-container">
                   <div>
                     <Link to={`/projects/${edge.node.slug}`}>
-                      <img src={projectImage} alt="t" />
+                      <img src={"https:" + edge.node.image.file.url} alt="t" />
                     </Link>
                   </div>
                 </div>
@@ -63,7 +71,7 @@ const IndexPage = () => {
               <div key={edge.node.id} className="project-even">
                 <div className="image-container">
                   <Link to={`/projects/${edge.node.slug}`}>
-                    <img src={projectImage} alt="t" />
+                    <img src={"https:" + edge.node.image.file.url} alt="t" />
                   </Link>
                 </div>
                 <div className="about_project">

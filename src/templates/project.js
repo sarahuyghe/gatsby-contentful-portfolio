@@ -6,7 +6,10 @@ import projectStyles from "./project.module.scss"
 import Layout from "../components/layout"
 import Head from "../components/head"
 
-import projectImage from "./firstTEst.png"
+// import projectImageBXL from "./bxl.jpg"
+// import projectImageCubo from "./cubo.jpg"
+// import projectImageGreenGames from "./greengames.jpg"
+// import projectImageWatchlist from "./watchlist.jpg"
 
 const Project = ({ data }) => {
   console.log(data.project.titel)
@@ -18,7 +21,7 @@ const Project = ({ data }) => {
         <h4>{data.project.introduction.introduction}</h4>
       </div>
       <div className={projectStyles.imageContainer}>
-        <img src={projectImage} alt="t" />
+        <img src={"https:" + data.project.image.file.url} alt="t" />
       </div>
       <div className={projectStyles.about}>
         <div className={projectStyles.briefing}>
@@ -31,7 +34,7 @@ const Project = ({ data }) => {
             <p>{data.project.concept.concept}</p>
           </div>
           <div className={projectStyles.linkToProject}>
-            <a href="https://www.sarahuyghe.be">Visit the project</a>
+            <a href={data.project.site}>Visit the project</a>
           </div>
         </div>
         <div className={projectStyles.credits}>
@@ -65,6 +68,12 @@ export const pageQuery = graphql`
       slug
       titel
       client
+      site
+      image {
+        file {
+          url
+        }
+      }
       introduction {
         introduction
       }

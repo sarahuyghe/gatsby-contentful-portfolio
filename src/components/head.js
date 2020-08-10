@@ -14,7 +14,11 @@ const Head = ({ title }) => {
   `)
   return (
     <Helmet>
-      <meta charSet="utf-8" />
+      <meta
+        charSet="utf-8"
+        name="Description"
+        content="Sara Huyghe personal portfolio"
+      />
       <title>
         {data.site.siteMetadata.title} | {title}
       </title>

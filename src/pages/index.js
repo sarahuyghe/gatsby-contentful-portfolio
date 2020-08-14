@@ -47,7 +47,13 @@ const IndexPage = () => {
         {data.allContentfulProject.edges.map((edge, index) => {
           if (index % 2) {
             return (
-              <div key={edge.node.id} className="project-odd">
+              <div
+                key={edge.node.id}
+                className="project-odd"
+                data-sal="fade-up"
+                data-sal-delay="2000"
+                data-sal-easing="ease"
+              >
                 <div className="about_project">
                   <h2>{edge.node.titel}</h2>
                   <p>{edge.node.introduction.introduction}</p>
@@ -68,7 +74,13 @@ const IndexPage = () => {
             )
           } else {
             return (
-              <div key={edge.node.id} className="project-even">
+              <div
+                key={edge.node.id}
+                className="project-even"
+                data-sal="fade-up"
+                data-sal-delay="2000"
+                data-sal-easing="ease"
+              >
                 <div className="image-container">
                   <Link to={`/projects/${edge.node.slug}`}>
                     <img src={"https:" + edge.node.image.file.url} alt="t" />

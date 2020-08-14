@@ -15,6 +15,7 @@ module.exports = {
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
+    "gatsby-plugin-scroll-reveal",
     {
       resolve: `gatsby-source-contentful`,
       options: {

@@ -18,30 +18,24 @@ const AboutPage = () => {
             I'm Sara, a <strong>Front End Developer</strong>
           </h1>
         </div>
-        {/* <div className="about_container"> */}
-
         <div className="about_detail">
           <p>
-            I'm Sara Huyghe, a 22-years old Digital design and development
-            student at Howest. My main focus is front-end development.{" "}
+            I'm Sara Huyghe, a 22-years old front-end developer. Graduated in
+            July 2020 as a Devine, digital design and development, student at
+            Howest.
           </p>
           <p>
             When I’m not working or learning about new technologies, you can
             find me watching/playing sports, listening to music or talking about
             anything in a local pub.
           </p>
+          <p>Currently open for awesome joboffers.</p>
         </div>
-        {/* </div> */}
-        {/* <div > */}
-        {/* <Image src={selfportrait} width={390} height={525} mode="fit" /> */}
-        {/* <div></div> */}
-
         <img
           src={selfportrait}
           alt="img of myself"
           className="image_container"
         />
-        {/* </div> */}
       </section>
       <section className="info_skills">
         <h3>Skills</h3>

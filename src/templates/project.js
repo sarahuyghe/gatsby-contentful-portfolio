@@ -21,7 +21,14 @@ const Project = ({ data }) => {
         <h4>{data.project.introduction.introduction}</h4>
       </div>
       <div className={projectStyles.imageContainer}>
-        <img src={"https:" + data.project.image.file.url} alt="t" />
+        <picture>
+          <source srcset={"https:" + data.project.image.file.url + ""}/>
+          <source />
+          <img
+            src={"https:" + data.project.image.file.url}
+            alt={"picture of my project: " + data.project.titel}
+          />
+        </picture>
       </div>
       <div className={projectStyles.about}>
         <div className={projectStyles.briefing}>

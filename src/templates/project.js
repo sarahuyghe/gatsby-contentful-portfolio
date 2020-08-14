@@ -12,7 +12,6 @@ import Head from "../components/head"
 // import projectImageWatchlist from "./watchlist.jpg"
 
 const Project = ({ data }) => {
-  console.log(data.project.titel)
   return (
     <Layout>
       <Head title={data.project.titel} />
@@ -22,7 +21,7 @@ const Project = ({ data }) => {
       </div>
       <div className={projectStyles.imageContainer}>
         <picture>
-          <source srcset={"https:" + data.project.image.file.url + ""}/>
+          <source srcset={"https:" + data.project.image.file.url + ""} />
           <source />
           <img
             src={"https:" + data.project.image.file.url}

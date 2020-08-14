@@ -32,7 +32,6 @@ const IndexPage = () => {
     }
   `)
 
-  console.log(data)
   return (
     <Layout>
       <Head title="Projects" />

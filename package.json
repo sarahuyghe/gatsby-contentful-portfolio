@@ -16,7 +16,7 @@
   "dependencies": {
     "bootstrap": "^4.5.1",
     "dotenv": "^8.2.0",
-    "gatsby": "^2.24.10",
+    "gatsby": "^4.25.7",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-sass": "^2.3.12",
     "gatsby-plugin-scroll-reveal": "^0.0.7",
